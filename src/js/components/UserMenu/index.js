@@ -21,9 +21,10 @@ class UserMenuView extends Component {
     const lastName = this.props.userData.last_name.toUpperCase()
     return (
       <IconMenu
-        iconButtonElement={ <IconButton iconStyle={styles.iconButton}>
-                              <Avatar backgroundColor="white" color="black">{ name.charAt(0).toUpperCase() }</Avatar>
-                            </IconButton> }
+        iconButtonElement={
+          <IconButton iconStyle={styles.iconButton}>
+            <Avatar backgroundColor="white" color="black">{name.charAt(0).toUpperCase()}</Avatar>
+          </IconButton>}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         targetOrigin={{ horizontal: 'right', vertical: 'top' }}
         style={styles.iconMenu}
@@ -39,7 +40,7 @@ class UserMenuView extends Component {
   render() {
     return (
       <div style={styles.root}>
-        { getAccessToken() && (this.props.userData && this.props.isAuthenticated && this.props.userData.first_name) ? this.renderProfileMenu() : '' }
+        {getAccessToken() && (this.props.userData && this.props.isAuthenticated && this.props.userData.first_name) ? this.renderProfileMenu() : ''}
       </div>
     )
   }
@@ -47,7 +48,8 @@ class UserMenuView extends Component {
 UserMenuView.propTypes = {
   userData: React.PropTypes.object,
   isAuthenticated: React.PropTypes.bool,
-  logout: React.PropTypes.func
+  logout: React.PropTypes.func,
+  showUserInfo: React.PropTypes.func
 }
 
 const mapStateToProps = (state) => {
