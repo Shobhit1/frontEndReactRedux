@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
 
-import styles from './Styles'
+import styles from './styles'
 
 class TextFieldComp extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class TextFieldComp extends Component {
         onChange={(event) => this.handleChange(event)}
         floatingLabelFixed={this.props.disabled}
         multiLine={this.props.multiLine || false}
-        type={this.props.type || 'text' }
+        type={this.props.type || 'text'}
       />
       )
   }

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import styles from './styles'
 
-class NavBarCompView extends Component {
+class NavBarComp extends Component {
   handleChange = (value) => {
     this.setState({
       value,
@@ -25,17 +25,8 @@ class NavBarCompView extends Component {
   }
 }
 
-NavBarCompView.propTypes = {
+NavBarComp.propTypes = {
   data: React.PropTypes.array
 }
 
-const mapStateToProps = (state) => {
-  return state
-}
-const mapDispatchToProps = (dispatch) => {
-  return {
-  }
-}
-
-const NavBarComp = connect(mapStateToProps, mapDispatchToProps)(NavBarCompView)
 export default NavBarComp
