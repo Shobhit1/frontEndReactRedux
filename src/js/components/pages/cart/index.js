@@ -46,12 +46,12 @@ class CartView extends Component {
         <TableRowColumn style={{ width: '30%', height: '32px', textTransform: 'uppercase' }}>{row.name}</TableRowColumn>
         <TableRowColumn style={{ width: '10%', height: '32px', textTransform: 'uppercase' }}>{`$ ${row.amount}`}</TableRowColumn>
         <TableRowColumn style={{ width: '10%', height: '32px', textTransform: 'uppercase' }}>
-          <DropDown valueChange={(value) => this.handleValueChange(row, value)}/>
+          <DropDown valueChange={(value) => this.handleValueChange(row, value)} />
         </TableRowColumn>
         <TableRowColumn style={{ width: '5%', height: '32px', textTransform: 'uppercase' }}>
-          <IconButton iconClassName="fa fa-trash" onClick={() => {
-            this.props.removeItemFromCart(row)
-          }}
+          <IconButton
+            iconClassName="fa fa-trash"
+            onClick={() => { this.props.removeItemFromCart(row) }}
           />
         </TableRowColumn>
       </TableRow>

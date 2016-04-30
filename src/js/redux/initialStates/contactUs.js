@@ -1,3 +1,3 @@
 export default {
-  isQuerySubmitted: true,
+  isQuerySubmitted: false
 }

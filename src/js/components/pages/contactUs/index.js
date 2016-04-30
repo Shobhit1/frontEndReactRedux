@@ -19,8 +19,6 @@ class ContactUs extends Component {
     let email
     let statement
     return (
-      // isQuerySubmitted ?
-      // show snackbar
       <div>
         <Paper style={styles.paper}>
           <form
@@ -71,14 +69,14 @@ class ContactUs extends Component {
                 type="text"
                 multiLine
               />
-          </div>
+            </div>
             <div style={styles.buttonWrapper}>
               <RaisedButton label="Submit" primary type="submit" disabled={false} style={styles.button} />
             </div>
           </form>
         </Paper>
-        { this.props.data && this.props.data.isQuerySubmitted ? this.renderSnackBar() : '' }
-    </div>
+        {this.props.data.isQuerySubmitted ? this.renderSnackBar() : ''}
+      </div>
     )
   }
 }
@@ -89,7 +87,7 @@ ContactUs.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.contactUS
+    isQuerySubmitted: state.contactUS.isQuerySubmitted
   }
 }
 const mapDispatchToProps = (dispatch) => {
