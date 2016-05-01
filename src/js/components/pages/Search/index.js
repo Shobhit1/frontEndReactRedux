@@ -37,28 +37,29 @@ class SearchResults extends Component {
       <div className="col-1-1">
         <Paper style={styles.paper}>
           <div className="col-1-2">
-           <div className="content">
+            <div className="content">
                {this.props.data ? this.props.data.length : 0} Results Found
-           </div>
+            </div>
           </div>
-          {this.props.data && this.props.data.length > 0 ? (<div className="col-1-2">
-           <div className="content">
-             <SelectField
-               value={this.props.sortType || 1}
-               onChange={(event, index, value) => {
-                 const sortType = value % 2
-                 this.props.handleChangeSortType(value)
-                 this.props.onSubmit(
-                   this.props.query,
-                   (sortType === 0) ? '/desc' : '',
-                 )
-               }}
-             >
-               <MenuItem value={1} primaryText="Price - Low to High"/>
-               <MenuItem value={2} primaryText="Price - High to Low"/>
-             </SelectField>
-           </div>
-          </div>) : null}
+          {this.props.data && this.props.data.length > 0 ?
+            (<div className="col-1-2">
+              <div className="content">
+                <SelectField
+                  value={this.props.sortType || 1}
+                  onChange={(event, index, value) => {
+                    const sortType = value % 2
+                    this.props.handleChangeSortType(value)
+                    this.props.onSubmit(
+                      this.props.query,
+                      (sortType === 0) ? '/desc' : '',
+                    )
+                  }}
+                >
+                  <MenuItem value={1} primaryText="Price - Low to High" />
+                  <MenuItem value={2} primaryText="Price - High to Low" />
+                </SelectField>
+              </div>
+            </div>) : null}
         </Paper>
       </div>
     )

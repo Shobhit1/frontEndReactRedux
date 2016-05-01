@@ -110,7 +110,7 @@ class LoginView extends Component {
             />
           </div>
           <div className="col-1-2">
-            <RaisedButton label="Register" secondary disabled={false} style={styles.button} onClick={() => this.props.changeMode(true)}/>
+            <RaisedButton label="Register" secondary disabled={false} style={styles.button} onClick={() => this.props.changeMode(true)} />
           </div>
           <div style={styles.buttonWrapper}>
             <RaisedButton label="Login" primary type="submit" disabled={false} style={styles.button} />
@@ -123,8 +123,8 @@ class LoginView extends Component {
     return (
       <div className="grid grid-pad">
         {this.props.data.registrationMode ? this.renderRegistrationMode() : this.renderLoginForm()}
-        { this.props.data.registrationFailed ? this.renderSnackBar('Registration Failed') : '' }
-        { this.props.attemptFailed ? this.renderSnackBar('Wrong Credentials') : '' }
+        {this.props.data.registrationFailed ? this.renderSnackBar('Registration Failed') : ''}
+        {this.props.attemptFailed ? this.renderSnackBar('Wrong Credentials') : ''}
       </div>
     )
   }

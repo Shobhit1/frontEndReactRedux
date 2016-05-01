@@ -41,11 +41,11 @@ class ProductDetail extends Component {
             <CardTitle title={data.name} subtitle={data._category} />
             <CardText>
               Product Description
-              <br/><br/>
+              <br /><br />
               Price: $ {data.amount}
             </CardText>
             <CardActions style={styles.buttonWrapper}>
-              <FlatButton label="Add To Cart" primary style={styles.button} onClick={() => this.props.addToCart(data)}/>
+              <FlatButton label="Add To Cart" primary style={styles.button} onClick={() => this.props.addToCart(data)} />
             </CardActions>
           </Card>
         </div>
