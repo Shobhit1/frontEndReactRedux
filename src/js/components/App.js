@@ -51,7 +51,7 @@ class App extends Component {
               <a href="/">
                 <ActionHome style={styles.largeIcon} />
               </a>
-              <NavBar data={menus}/>
+              <NavBar data={menus} />
               <Badge />
               <UserMenu />
             </AppBar>
