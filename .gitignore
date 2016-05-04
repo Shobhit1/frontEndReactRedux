@@ -6,3 +6,5 @@ build/
 *.log*
 npm-debug.log
 public/index.html
+index2.html
+Readme2.md
