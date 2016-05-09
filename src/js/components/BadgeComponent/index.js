@@ -37,7 +37,7 @@ class BadgeComponentView extends Component {
   renderBadge() {
     return (
       <IconMenu
-        iconButtonElement={ this.renderIconButtonElement() }
+        iconButtonElement={this.renderIconButtonElement()}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         targetOrigin={{ horizontal: 'right', vertical: 'top' }}
       >
@@ -50,7 +50,7 @@ class BadgeComponentView extends Component {
   render() {
     return (
       <div style={styles.root}>
-        { getAccessToken() && (this.props.userData && this.props.isAuthenticated && this.props.userData.first_name) ? this.renderBadge() : '' }
+        {getAccessToken() && (this.props.userData && this.props.isAuthenticated && this.props.userData.first_name) ? this.renderBadge() : ''}
       </div>
     )
   }
