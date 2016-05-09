@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { GridList, GridTile } from 'material-ui/GridList'
 import IconButton from 'material-ui/IconButton'
-// import AddToShoppingCart from 'material-ui/svg-icons/Action/3d_rotation'
 import { connect } from 'react-redux'
 import { getIndividualProduct } from '../../redux/actions/productsActions'
-import { goToPage } from '../../redux/actions/routingActions'
 
 import styles from './styles'
 

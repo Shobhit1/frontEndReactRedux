@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 
 import Badge from 'material-ui/Badge'
 import IconButton from 'material-ui/IconButton'
-import NotificationsIcon from 'material-ui/svg-icons/social/notifications'
 import IconMenu from 'material-ui/IconMenu'
-import Avatar from 'material-ui/Avatar'
 import MenuItem from 'material-ui/MenuItem'
 import Divider from 'material-ui/Divider'
 

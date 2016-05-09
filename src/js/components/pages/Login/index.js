@@ -4,7 +4,6 @@ import Paper from 'material-ui/Paper'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import { authenticate, createUser, toggleRegistrationMode } from '../../../redux/actions/loginActions'
-import { AUTHENTICATE } from '../../../redux/constants/actions'
 
 import SnackBar from '../../SnackBar'
 import styles from './style'

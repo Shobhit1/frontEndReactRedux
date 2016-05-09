@@ -10,13 +10,11 @@ import Avatar from 'material-ui/Avatar'
 import MenuItem from 'material-ui/MenuItem'
 import Divider from 'material-ui/Divider'
 
-
 import { logoutActionCreater } from '../../redux/actions/loginActions'
 import { snackBarAction } from '../../redux/actions/productsActions'
 import { goToPage } from '../../redux/actions/routingActions'
 
 class UserMenuView extends Component {
-  renderProfileMenu() {
     const name = this.props.userData.first_name.toUpperCase()
     const lastName = this.props.userData.last_name.toUpperCase()
     return (

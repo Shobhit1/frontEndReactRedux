@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { authenticate } from '../../../redux/actions/loginActions'
 import { BANNER } from '../../../redux/constants/actions'
 
 import ReactSlider from '../../slider'
 import GridList from '../../GridList'
-import styles from './style'
 import SnackBar from '../../SnackBar'
 
 class ProductsView extends Component {
@@ -54,11 +52,5 @@ const mapStateToProps = (state) => {
     snackBarDisplay: state.products.snackBarDisplay
   }
 }
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-
-  }
-}
-const Products = connect(mapStateToProps, mapDispatchToProps)(ProductsView)
+const Products = connect(mapStateToProps)(ProductsView)
 export default Products

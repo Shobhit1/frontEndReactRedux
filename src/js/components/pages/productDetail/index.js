@@ -4,13 +4,9 @@ import ReactSlider from '../../slider'
 
 import Card from 'material-ui/Card/Card'
 import CardActions from 'material-ui/Card/CardActions'
-import CardHeader from 'material-ui/Card/CardHeader'
 import CardTitle from 'material-ui/Card/CardTitle'
 import FlatButton from 'material-ui/FlatButton'
 import CardText from 'material-ui/Card/CardText'
-import RaisedButton from 'material-ui/RaisedButton'
-import Paper from 'material-ui/Paper'
-import TextField from 'material-ui/TextField'
 
 import { PRODUCT_IMAGES } from '../../../redux/constants/actions'
 import { addToCart } from '../../../redux/actions/shoppingCartActions'

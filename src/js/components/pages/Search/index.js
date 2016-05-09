@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { goToPage } from '../../../redux/actions/routingActions'
 import { performSearch, clearResults, changeSortType } from '../../../redux/actions/searchActions'
 
 import Paper from 'material-ui/Paper'
@@ -9,8 +8,6 @@ import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
-import ReactSlider from '../../slider'
-import GridList from '../../GridList'
 import styles from './style'
 import SnackBar from '../../SnackBar'
 
@@ -74,26 +71,26 @@ class SearchResults extends Component {
     )) : null
     return (
       <div className="col-1-1">
-      <Paper style={styles.paper}>
-        <Table>
-          <TableHeader
-            displaySelectAll={false}
-            adjustForCheckbox={false}
-          >
-            <TableRow>
-              <TableHeaderColumn>Name</TableHeaderColumn>
-              <TableHeaderColumn>Amount</TableHeaderColumn>
-              <TableHeaderColumn>Quantity</TableHeaderColumn>
-            </TableRow>
-          </TableHeader>
-          <TableBody
-            displayRowCheckbox={false}
-          >
-            {ResultRows}
-          </TableBody>
-        </Table>
-      </Paper>
-    </div>
+        <Paper style={styles.paper}>
+          <Table>
+            <TableHeader
+              displaySelectAll={false}
+              adjustForCheckbox={false}
+            >
+              <TableRow>
+                <TableHeaderColumn>Name</TableHeaderColumn>
+                <TableHeaderColumn>Amount</TableHeaderColumn>
+                <TableHeaderColumn>Quantity</TableHeaderColumn>
+              </TableRow>
+            </TableHeader>
+            <TableBody
+              displayRowCheckbox={false}
+            >
+              {ResultRows}
+            </TableBody>
+          </Table>
+        </Paper>
+      </div>
     )
   }
   render() {
@@ -102,25 +99,25 @@ class SearchResults extends Component {
       <div className="grid grid-pad">
         <div className="col-1-1">
           <Paper style={styles.paper}>
-          <form
-            onSubmit={(event) => {
-              event.preventDefault()
-              this.props.onSubmit(
-                query.getValue(),
-              )
-            }}
-          >
-            <div>
-              <TextField
-                ref={(node) => { query = node }}
-                style={styles.field}
-                floatingLabelText="Enter Query"
-                required="true"
-                type="text"
-              />
-            </div>
-            <RaisedButton label="Search" primary type="submit" disabled={false} style={styles.button} />
-          </form>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault()
+                this.props.onSubmit(
+                  query.getValue(),
+                )
+              }}
+            >
+              <div>
+                <TextField
+                  ref={(node) => { query = node }}
+                  style={styles.field}
+                  floatingLabelText="Enter Query"
+                  required="true"
+                  type="text"
+                />
+              </div>
+              <RaisedButton label="Search" primary type="submit" disabled={false} style={styles.button} />
+            </form>
           </Paper>
         </div>
         {this.props.showResults && this.renderResultStatus()}
@@ -157,7 +154,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: (query, sortType = '') => {
-      // dispatch(goToPage(`/search?q=${query}`))
       dispatch(performSearch(query, sortType))
     },
     clearResults: () => {
