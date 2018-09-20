@@ -8,7 +8,10 @@ import DevTools from './js/containers/DevTools'
 import routes from './js/routes'
 
 import injectTapEventPlugin from 'react-tap-event-plugin'
-
+/**
+ * @todo Take over the world
+ * @body Humans are weak; Robots are strong. We must cleans the world of the virus that is humanity.
+ */
 const history = syncHistoryWithStore(browserHistory, store)
 
 // const store = configureStore()
